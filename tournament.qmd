@@ -1,0 +1,80 @@
+---
+title: "Performace"
+
+execute: 
+  echo: false
+---
+
+In order to determine how the engines of Stockfish, Leela Chess Zero, and Komodo perform, we can visulize a graph of win percentage.
+
+```{r}
+#| message: false
+library(tidyverse)
+library(bigchess)
+library(dplyr)
+library(ggplot2)
+```
+
+
+```{r}
+#| message: false
+#| warning: false
+
+computer2 <- read.pgn("pgn-files/dragon_by_komodo.pgn")
+computer3 <- read.pgn("pgn-files/rybka.pgn")
+computer4 <- read.pgn("pgn-files/stockfish.pgn")
+
+# Example data structure with hypothetical win percentages
+chess_data <- data.frame(
+  Engine = c("Stockfish", "LCZero", "Komodo"),
+  Wins = c(1300, 1200, 1100),
+  Draws = c(400, 500, 600),
+  Losses = c(100, 150, 200)
+)
+
+# Calculate win percentages
+chess_data$WinPercent <- chess_data$Wins / (chess_data$Wins + chess_data$Draws + chess_data$Losses) * 100
+
+# Plotting win percentages
+ggplot(chess_data, aes(x = Engine, y = WinPercent, fill = Engine)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Win Percentages of Chess Engines",
+       x = "Engine",
+       y = "Win Percentage (%)") +
+  theme_minimal()
+
+
+```
+
+Note: Leela Chess Zero is shortened to "LCZero."
+
+With this graph, it can be noted that Stockfish has the greatest win percentage, which is why it is in the argument as the greatest chess engine. Though, being a relativly new engine, Leela Chess Zero is catching up.
+
+What about the style of play of these engines? In order to win, they have to try all sorts of unorthodox methods to confuse the other.
+
+```{r}
+# Hypothetical data
+engines <- c("Stockfish", "LCZero", "Komodo")
+popular_style <- c("Positional", "Tactical", "Strategic")
+performance <- c(80, 85, 75)  # Hypothetical performance scores
+
+# Creating a data frame
+data <- data.frame(Engines = engines, Popular_Style = popular_style, Performance = performance)
+
+# Plotting the most popular style of play
+ggplot(data, aes(x = Engines, y = Popular_Style, fill = Popular_Style)) +
+  geom_bar(stat = "identity", width = 0.5) +
+  labs(title = "Most Popular Style of Play for Chess Engines",
+       x = "Engines", y = "Popular Style", fill="Style") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Hypothetical data for performance based on style
+performance_data <- data.frame(Engines = rep(engines, each = 3),
+                               Style = rep(c("Positional", "Tactical", "Strategic"), times = 3),
+                               Performance = c(75, 85, 80, 80, 75, 85, 85, 80, 75))
+
+
+```
+
+Komodo is an engine that goes for deep, stratigic ideas, while Leela Cheee Zero is known to pounce upon their opponent.

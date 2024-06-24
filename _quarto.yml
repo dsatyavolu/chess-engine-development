@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Development of Chess Computers Across Decades"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - tournament.qmd
+      - sources.qmd
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

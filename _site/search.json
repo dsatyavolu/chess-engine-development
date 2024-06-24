@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "tournament.html",
+    "href": "tournament.html",
+    "title": "Performace",
+    "section": "",
+    "text": "In order to determine how the engines of Stockfish, Leela Chess Zero, and Komodo perform, we can visulize a graph of win percentage.\n\n\n\n\n\n\n\n\n\nNote: Leela Chess Zero is shortened to “LCZero.”\nWith this graph, it can be noted that Stockfish has the greatest win percentage, which is why it is in the argument as the greatest chess engine. Though, being a relativly new engine, Leela Chess Zero is catching up.\nWhat about the style of play of these engines? In order to win, they have to try all sorts of unorthodox methods to confuse the other.\n\n\n\n\n\n\n\n\n\nKomodo is an engine that goes for deep, stratigic ideas, while Leela Cheee Zero is known to pounce upon their opponent."
+  },
+  {
+    "objectID": "sources.html",
+    "href": "sources.html",
+    "title": "Sources",
+    "section": "",
+    "text": "Main Data Sets\nMuch of the data in this project was gathered from CCRL (Computer Chess Rating Lists) and TCEC. (Top Engine Chess Championship)\n\n\nAdditional Data Sets\nOther information to help build this project was taken from CEGT (Chess Engine Grand Tournament) as well as FICS. (Free Internet Chess Server)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Development of Chess Computers Across Decades",
+    "section": "",
+    "text": "Chess has been around since the 6th century, and in the 20th century, the game once studied by humans was conquered by computers. This began with IBM’s Deep Blue engine, which defeated World Champion Garry Kasparov in 1997. After this historic match, chess engines began to develop at an unprecedented rate, and in present times, they have outclassed humans in strategy, technique, and calculation.\nTo begin with, let’s analyze how certain computers have scaled to the strength they possess today by comparing their growth with their human counterparts.\n\n\n\n\n\n\n\n\n\nThe graph above shows the rating growth of Magnus Carlsen, a former world champion, and the chess engine Stockfish. Over the years, Carlsen has kept a steady rating of around 2800. In contrast, Stockfish’s rating has consistently increased at a unprecedented rate. Remarkably, by late 2011, Stockfish had achieved a rating higher than any human and has continued to improve since then.\nWell, it seems that a comparison of humans and engines is settled, but how about an engine such as Stockfish paired up against other engine?\nNow, it can be argued that Stockfish is the strongest chess engine developed, but let us take a look at how it fairs against upcoming developmental engines such as Leela Chess Zero and Komodo.\n\n\n\n\n\n\n\n\n\nWell, this is interesting! Leela Chess Zero is a hundred or so rating points above Stockfish. Why is this the case? Well, Leela Chess Zero is designed with a method called “reinforcment learning.” This is a machine learning algorithm, which has been used in Google’s Deep Mind AlphaZero. Stockfish uses the “minimax” algorithm, which considers a set of potential stratigies and chooses the best one, but is not close to the depth of Leela Chess Zero.\nNow, rating is one thing, but what about the wins and losses of these engines in tournaments such as the TCEC, or Top Chess Engine Championship. Let’s take a look in the next page."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About Me\nMy name is Dinesh Satyavolu, and am currently attending high school at Triangle Math and Science Academy in Apex, North Carolina. If you have any questions about this project, please contact me at dineshsatyavolu2007@gmail.com\nThis Project\nI was able to develop this project with the knowledge I gained from Kane’s Free Data Science Course.\nMore information on this project can be found on GitHub."
+  }
+]

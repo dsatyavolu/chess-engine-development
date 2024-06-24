@@ -1,0 +1,11 @@
+---
+title: "Sources"
+---
+
+# Main Data Sets
+
+Much of the data in this project was gathered from [CCRL](http://computerchess.org.uk/ccrl/) (Computer Chess Rating Lists) and [TCEC](https://tcec-chess.com/). (Top Engine Chess Championship)
+
+# Additional Data Sets
+
+Other information to help build this project was taken from [CEGT](http://www.cegt.net/) (Chess Engine Grand Tournament) as well as [FICS](https://www.freechess.org/). (Free Internet Chess Server)

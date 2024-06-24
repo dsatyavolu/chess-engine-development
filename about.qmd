@@ -1,0 +1,15 @@
+---
+title: "About"
+---
+
+**About Me**
+
+My name is Dinesh Satyavolu, and am currently attending high school at Triangle Math and Science Academy in Apex, North Carolina. If you have any questions about this project, please contact me at dineshsatyavolu2007@gmail.com
+
+**This Project**
+
+I was able to develop this project with the knowledge I gained from [Kane's Free Data Science Course](https://bootcamp.davidkane.info/).
+
+
+More information on this project can be found on [GitHub](https://github.com/satyavoludinesh/chess-engine-development).
+
