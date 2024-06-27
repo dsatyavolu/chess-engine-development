@@ -1,5 +1,5 @@
 ---
-title: "Performace"
+title: "Performance"
 
 execute: 
   echo: false
@@ -8,7 +8,9 @@ execute:
 In order to determine how the engines of Stockfish, Leela Chess Zero, and Komodo perform, we can visualize a graph of win percentage.
 
 ```{r}
+#| label: setup
 #| message: false
+
 library(tidyverse)
 library(bigchess)
 library(dplyr)
@@ -18,14 +20,14 @@ library(plotly)
 
 
 ```{r}
+#| label: win percentage plot
 #| message: false
-#| warning: false
-
 computer2 <- read.pgn("pgn-files/dragon_by_komodo.pgn")
 computer3 <- read.pgn("pgn-files/rybka.pgn")
 computer4 <- read.pgn("pgn-files/stockfish.pgn")
 
-# current placeholder
+# pgn file in tibble format
+
 chess_data <- data.frame(
   Engine = c("Stockfish", "LCZero", "Komodo"),
   Wins = c(1300, 1200, 1100),
@@ -42,8 +44,6 @@ ggplot(chess_data, aes(x = Engine, y = WinPercent, fill = Engine)) +
        x = "Engine",
        y = "Win Percentage (%)") +
   theme_minimal()
-
-
 ```
 
 Note: Leela Chess Zero is shortened to "LCZero."
@@ -53,7 +53,7 @@ With this graph, it can be noted that Stockfish has the greatest win percentage,
 What about the style of play of these engines? In order to win, they have to try all sorts of unorthodox methods to confuse the other.
 
 ```{r}
-
+#| label: style of play plot
 engines <- c("Stockfish", "LCZero", "Komodo")
 popular_style <- c("Positional", "Tactical", "Strategic")
 performance <- c(80, 85, 75)  
@@ -73,8 +73,6 @@ ggplot(data, aes(x = Engines, y = Popular_Style, fill = Popular_Style)) +
 performance_data <- data.frame(Engines = rep(engines, each = 3),
                                Style = rep(c("Positional", "Tactical", "Strategic"), times = 3),
                                Performance = c(75, 85, 80, 80, 75, 85, 85, 80, 75))
-
-
 ```
 
 Komodo is an engine that goes for deep, strategic ideas, while Leela Cheee Zero is known to pounce upon their opponent.
@@ -88,10 +86,10 @@ Though go is vastly different than chess in terms of the rules, board, and piece
 Let's take a look at how they compare.
 
 ```{r}
-#| message: false
-#| warning: false
+#| label: comparison of matches plot
 
-# Accurate data for AlphaGo vs Lee Sedol and Deep Blue vs Garry Kasparov
+# data for alphago vs lee sedol and deep blue vs garry kasparov matches
+
 match_data <- data.frame(
   Match = c("AlphaGo vs Lee Sedol", "AlphaGo vs Lee Sedol", "AlphaGo vs Lee Sedol", "AlphaGo vs Lee Sedol", "AlphaGo vs Lee Sedol",
             "Deep Blue vs Garry Kasparov", "Deep Blue vs Garry Kasparov", "Deep Blue vs Garry Kasparov", "Deep Blue vs Garry Kasparov", "Deep Blue vs Garry Kasparov", "Deep Blue vs Garry Kasparov"),
@@ -100,7 +98,7 @@ match_data <- data.frame(
              "Kasparov", "Deep Blue", "Draw", "Draw", "Draw", "Deep Blue")
 )
 
-# Create the ggplot object
+
 ggplot_plot <- ggplot(match_data, aes(x = factor(Game), fill = Winner)) +
   geom_bar() +
   facet_wrap(~ Match, scales = "free_x") +
@@ -109,10 +107,11 @@ ggplot_plot <- ggplot(match_data, aes(x = factor(Game), fill = Winner)) +
        y = "Count") +
   theme_minimal()
 
-# Make the ggplot interactive with plotly
+#interactive feature
+
 interactive_plot <- ggplotly(ggplot_plot)
 
-# Display the interactive plot
+
 interactive_plot
 ```
 

@@ -5,11 +5,12 @@ website:
   title: "Development of Chess Computers Across Decades"
   navbar:
     left:
-      - href: index.qmd
+      - href: page0.qmd
         text: Home
-      - tournament.qmd
-      - sources.qmd
-      - about.qmd
+      - page1.qmd
+      - page2.qmd
+      - page3.qmd
+      - page4.qmd
 
 format:
   html:

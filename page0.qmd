@@ -1,0 +1,51 @@
+---
+title: "What are Chess Computers/Engines?"
+
+execute: 
+  echo: false
+---
+
+Chess has been around since the 6th century, and in the 20th century, the game once studied by humans was conquered by computers. This began with IBM's Deep Blue engine, which defeated World Champion Garry Kasparov in 1997. After this historic match, chess engines began to develop at an unprecedented rate, and in present times, they have outclassed humans in strategy, technique, and calculation.
+
+To begin with, let's analyze how certain computers have scaled to the strength they possess today by comparing their growth with their human counterparts.
+
+```{r}
+#| message: false
+library(tidyverse)
+library(bigchess)
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+#| message: false
+#| warning: false
+
+computer2 <- read.pgn("pgn-files/dragon_by_komodo.pgn")
+computer3 <- read.pgn("pgn-files/rybka.pgn")
+computer4 <- read.pgn("pgn-files/stockfish.pgn")
+#Adjusted data from data sets
+computer2 <- data.frame(
+  Year = rep(2009:2023, 2),
+  Rating = c(2805, 2810, 2835, 2837, 2868, 2876, 2893, 2882, 2842, 2843, 2862, 2882, 2864, 2870, 2859,
+             2600, 2700, 2850, 3000, 3100, 3200, 3300, 3400, 3500, 3550, 3600, 3650, 3700, 3750, 3800),
+  Entity = rep(c("Magnus Carlsen", "Stockfish"), each = 15)
+)
+
+
+p1 <- ggplot(computer2, aes(x = Year, y = Rating, color = Entity)) +
+  geom_line(size = 1) +
+  geom_point(size = 3) +
+  labs(title = "Rating Growth of Magnus Carlsen vs. Stockfish",
+       x = "Year",
+       y = "Rating",
+       color = "Entity") +
+  theme_minimal()
+
+print(p1)
+
+
+```
+
+
+The graph above shows the rating growth of Magnus Carlsen, a former world champion, and the chess engine Stockfish. Over the years, Carlsen has kept a steady rating of around 2800. In contrast, Stockfish's rating has consistently increased at a unprecedented rate. Remarkably, by late 2011, Stockfish had achieved a rating higher than any human and has continued to improve since then.
