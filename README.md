@@ -8,12 +8,15 @@ This project will analyse various factors that are different between humans and 
 # Sources
 
 **Required Data Sets**
+
 Much of the data in this project was gathered from CCRL (Computer Chess Rating Lists) and TCEC. (Top Engine Chess Championship)
 
 **Additional Data Sets**
+
 Additional data to help build this project was taken from CEGT (Chess Engine Grand Tournament) as well as FICS. (Free Internet Chess Server)
 
 Data for the AlphaGo vs Lee Sedol and Deep Blue vs Garry Kasparov matches are posted on the internet. This information was put into a tibble.
 
 **Other Sources**
+
 The use of artificial intelligence software such as ChatGPT and Copilot were used to help with the development of this project.
