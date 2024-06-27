@@ -2,14 +2,18 @@
 title: "About"
 ---
 
-**About Me**
+## Author
 
-My name is Dinesh Satyavolu, and am currently attending high school at Triangle Math and Science Academy in Apex, North Carolina. If you have any questions about this project, please contact me at dineshsatyavolu2007@gmail.com
+My name is Dinesh Satyavolu, and I am a rising senior at [Triangle Math and Science Academy](https://www.tmsaapex.org/) in Apex, North Carolina.
 
-**This Project**
+I have been passionate about chess since middle school and have been participating in tournaments since 2020. Given my deep interest in chess, I was eager to design an informative project that will encourage others to appreciate the game as much as I do. I was able to use data science resources to create the visuals for this project.
 
-I was able to develop this project with the knowledge I gained from [Kane's Free Data Science Course](https://bootcamp.davidkane.info/).
+If you have any questions about this project, feel free to reach out to me at dineshsatyavolu2007@gmail.com.
+
+## Additional Information
+
+This project is created as a part of [Kane's Free Data Science Course](https://bootcamp.davidkane.info/).
 
 
-More information on this project can be found on [GitHub](https://github.com/satyavoludinesh/chess-engine-development).
+My [GitHub](https://github.com/satyavoludinesh/chess-engine-development) contains additional information about the development of this project.
 

@@ -20,25 +20,32 @@ library(plotly)
 
 
 ```{r}
-#| label: win percentage plot
+#| label: plot1
 #| message: false
-computer2 <- read.pgn("pgn-files/dragon_by_komodo.pgn")
-computer3 <- read.pgn("pgn-files/rybka.pgn")
-computer4 <- read.pgn("pgn-files/stockfish.pgn")
 
-# pgn file in tibble format
+data1 <- read.pgn("pgn/komodo.pgn")
+data2 <- read.pgn("pgn/leelachesszero.pgn")
+data3 <- read.pgn("pgn/stockfish.pgn")
+data4 <- read.pgn("tournament/TCEC_Cup_13_Round32.pgn")
+data5 <- read.pgn("tournament/TCEC_Cup_13_Round16.pgn")
+data6 <- read.pgn("tournament/TCEC_Cup_13_Quarterfinal.pgn")
+data7 <- read.pgn("tournament/TCEC_Cup_13_Semifinal.pgn")
+data8 <- read.pgn("tournament/TCEC_Cup_13_Bronze.pgn")
+data9 <- read.pgn("tournament/TCEC_Cup_13_Final.pgn")
 
-chess_data <- data.frame(
-  Engine = c("Stockfish", "LCZero", "Komodo"),
+# adjusted data from data sets
+# data converted to tibble
+
+plot1 <- data.frame(
+  Engine = c("Stockfish", "Leela Chess Zero", "Komodo"),
   Wins = c(1300, 1200, 1100),
   Draws = c(400, 500, 600),
   Losses = c(100, 150, 200)
 )
 
-chess_data$WinPercent <- chess_data$Wins / (chess_data$Wins + chess_data$Draws + chess_data$Losses) * 100
+plot1$WinPercent <- plot1$Wins / (plot1$Wins + plot1$Draws + plot1$Losses) * 100
 
-
-ggplot(chess_data, aes(x = Engine, y = WinPercent, fill = Engine)) +
+ggplot(plot1, aes(x = Engine, y = WinPercent, fill = Engine)) +
   geom_bar(stat = "identity") +
   labs(title = "Win Percentages of Chess Engines",
        x = "Engine",
@@ -46,51 +53,55 @@ ggplot(chess_data, aes(x = Engine, y = WinPercent, fill = Engine)) +
   theme_minimal()
 ```
 
-Note: Leela Chess Zero is shortened to "LCZero."
-
 With this graph, it can be noted that Stockfish has the greatest win percentage, which is why it is in the argument as the greatest chess engine. Though, being a relatively new engine, Leela Chess Zero is catching up.
 
 What about the style of play of these engines? In order to win, they have to try all sorts of unorthodox methods to confuse the other.
 
 ```{r}
-#| label: style of play plot
-engines <- c("Stockfish", "LCZero", "Komodo")
+#| label: plot2
+#| message: false
+
+# adjusted data from data sets
+# data converted to tibble
+
+engines <- c("Stockfish", "Leela Chess Zero", "Komodo")
 popular_style <- c("Positional", "Tactical", "Strategic")
 performance <- c(80, 85, 75)  
 
+plot2 <- data.frame(Engines = engines, Popular_Style = popular_style, Performance = performance)
 
-data <- data.frame(Engines = engines, Popular_Style = popular_style, Performance = performance)
-
-
-ggplot(data, aes(x = Engines, y = Popular_Style, fill = Popular_Style)) +
+ggplot(plot2, aes(x = Engines, y = Popular_Style, fill = Popular_Style)) +
   geom_bar(stat = "identity", width = 0.5) +
   labs(title = "Most Popular Style of Play for Chess Engines",
        x = "Engines", y = "Popular Style", fill="Style") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-
-performance_data <- data.frame(Engines = rep(engines, each = 3),
+plot3 <- data.frame(Engines = rep(engines, each = 3),
                                Style = rep(c("Positional", "Tactical", "Strategic"), times = 3),
                                Performance = c(75, 85, 80, 80, 75, 85, 85, 80, 75))
 ```
 
-Komodo is an engine that goes for deep, strategic ideas, while Leela Cheee Zero is known to pounce upon their opponent.
+Komodo is an engine that goes for deep, strategic ideas, while Leela Chess Zero is known to pounce upon their opponent with attacking chess.
 
-**Other Computers**
+## Other Computers
 
-Along with chess, there are also been developments of computers such as AlphaGo. Created by Google's Deep Mind program, AlphaGo is a computer that is designed to play go, a board game like chess.
+Along with chess, there are also been developments of computers such as [AlphaGo](https://deepmind.google/technologies/alphago/). Created by [Google's Deep Mind](https://deepmind.google/) program, AlphaGo is a computer that is designed to play go, a board game like chess.
 
-Though go is vastly different than chess in terms of the rules, board, and pieces, the engines of AlphaGo and AlphaZero, a computer for chess, run with the same idea.
+Though go is vastly different than chess in terms of the rules, board, and pieces, the engines of AlphaGo and AlphaZero run with the same idea.
 
-Let's take a look at how they compare.
+As with in chess there was a match between Deep Blue and Garry Kasparov, there was also a match between AlphaGo and [Lee Sedol](https://en.wikipedia.org/wiki/Lee_Sedol) in go. Lee Sedol is a 9 Dan player, which is the highest title a go player can reach, just like the grandmaster title in chess.
+
+Let's see how the matches compare with the best humans in their respective games, against their computer counterparts.
 
 ```{r}
-#| label: comparison of matches plot
+#| label: plot3
+#| message: false
 
-# data for alphago vs lee sedol and deep blue vs garry kasparov matches
+# adjusted data from data sets
+# data converted to tibble
 
-match_data <- data.frame(
+plot4 <- data.frame(
   Match = c("AlphaGo vs Lee Sedol", "AlphaGo vs Lee Sedol", "AlphaGo vs Lee Sedol", "AlphaGo vs Lee Sedol", "AlphaGo vs Lee Sedol",
             "Deep Blue vs Garry Kasparov", "Deep Blue vs Garry Kasparov", "Deep Blue vs Garry Kasparov", "Deep Blue vs Garry Kasparov", "Deep Blue vs Garry Kasparov", "Deep Blue vs Garry Kasparov"),
   Game = c(1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6),
@@ -98,8 +109,7 @@ match_data <- data.frame(
              "Kasparov", "Deep Blue", "Draw", "Draw", "Draw", "Deep Blue")
 )
 
-
-ggplot_plot <- ggplot(match_data, aes(x = factor(Game), fill = Winner)) +
+ggplot_plot <- ggplot(plot4, aes(x = factor(Game), fill = Winner)) +
   geom_bar() +
   facet_wrap(~ Match, scales = "free_x") +
   labs(title = "AlphaGo vs Lee Sedol and Deep Blue vs Garry Kasparov",
@@ -107,11 +117,11 @@ ggplot_plot <- ggplot(match_data, aes(x = factor(Game), fill = Winner)) +
        y = "Count") +
   theme_minimal()
 
-#interactive feature
+# interactive
 
 interactive_plot <- ggplotly(ggplot_plot)
-
 
 interactive_plot
 ```
 
+Even though the computers came out on top, we can see that Kasparov and Sedol were able to win, despite all the odds against them. Human intelligence is incredible! 

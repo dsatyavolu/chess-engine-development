@@ -1,0 +1,421 @@
+{
+	"Event" : "TCEC Season 26 - FRD 2 Semileague 1",
+	"Order" : [
+		"Stockfish dev-20240612-025da6a0",
+		"Ethereal 14.40-frc",
+		"KomodoDragon 3.3",
+		"RubiChess 20240506",
+		"Stormphrax 4.1.16_d07a844",
+		"Altair 7.0.6"
+	],
+	"Table" : {
+		"Altair 7.0.6" : {
+			"Abbreviation" : "Al",
+			"Elo" : 19,
+			"Games" : 4,
+			"GamesAsBlack" : 3,
+			"GamesAsWhite" : 1,
+			"LossAsBlack" : 2,
+			"LossAsWhite" : 1,
+			"Neustadtl" : 0.5,
+			"Opponent" : "Stormphrax 4.1.16_d07a844",
+			"Performance" : 12.5,
+			"Rank" : 6,
+			"Rating" : 3449,
+			"Results" : {
+				"Ethereal 14.40-frc" : {
+					"H2h" : 0,
+					"Scores" : [
+						{
+							"Game" : 5,
+							"Result" : 0,
+							"Winner" : "Black"
+						}
+					],
+					"Text" : "0"
+				},
+				"KomodoDragon 3.3" : {
+					"H2h" : 0,
+					"Scores" : [
+						{
+							"Game" : 2,
+							"Result" : 0,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "0"
+				},
+				"RubiChess 20240506" : {
+					"H2h" : 0,
+					"Scores" : [
+						{
+							"Game" : 9,
+							"Result" : 0,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "0"
+				},
+				"Stockfish dev-20240612-025da6a0" : {
+					"H2h" : 0,
+					"Scores" : [],
+					"Text" : ""
+				},
+				"Stormphrax 4.1.16_d07a844" : {
+					"H2h" : 0.5,
+					"Scores" : [
+						{
+							"Game" : 10,
+							"Result" : 0.5,
+							"Winner" : "None"
+						}
+					],
+					"Text" : "="
+				}
+			},
+			"Score" : 0.5,
+			"Strikes" : 0,
+			"WinsAsBlack" : 0,
+			"WinsAsWhite" : 0,
+			"RMobilityScore" : 0.375
+		},
+		"Ethereal 14.40-frc" : {
+			"Abbreviation" : "Et",
+			"Elo" : 9,
+			"Games" : 3,
+			"GamesAsBlack" : 1,
+			"GamesAsWhite" : 2,
+			"LossAsBlack" : 0,
+			"LossAsWhite" : 0,
+			"Neustadtl" : 3.25,
+			"Opponent" : "Altair 7.0.6",
+			"Performance" : 66.66666666666666,
+			"Rank" : 2,
+			"Rating" : 3542,
+			"Results" : {
+				"Altair 7.0.6" : {
+					"H2h" : 1,
+					"Scores" : [
+						{
+							"Game" : 5,
+							"Result" : 1,
+							"Winner" : "Black"
+						}
+					],
+					"Text" : "1"
+				},
+				"KomodoDragon 3.3" : {
+					"H2h" : 0,
+					"Scores" : [],
+					"Text" : ""
+				},
+				"RubiChess 20240506" : {
+					"H2h" : 0.5,
+					"Scores" : [
+						{
+							"Game" : 3,
+							"Result" : 0.5,
+							"Winner" : "None"
+						}
+					],
+					"Text" : "="
+				},
+				"Stockfish dev-20240612-025da6a0" : {
+					"H2h" : 0.5,
+					"Scores" : [
+						{
+							"Game" : 8,
+							"Result" : 0.5,
+							"Winner" : "None"
+						}
+					],
+					"Text" : "="
+				},
+				"Stormphrax 4.1.16_d07a844" : {
+					"H2h" : 0,
+					"Scores" : [],
+					"Text" : ""
+				}
+			},
+			"Score" : 2,
+			"Strikes" : 0,
+			"WinsAsBlack" : 1,
+			"WinsAsWhite" : 0,
+			"RMobilityScore" : 1.9921875
+		},
+		"KomodoDragon 3.3" : {
+			"Abbreviation" : "Ko",
+			"Elo" : 4,
+			"Games" : 3,
+			"GamesAsBlack" : 1,
+			"GamesAsWhite" : 2,
+			"LossAsBlack" : 1,
+			"LossAsWhite" : 0,
+			"Neustadtl" : 1.5,
+			"Opponent" : "Altair 7.0.6",
+			"Performance" : 66.66666666666666,
+			"Rank" : 3,
+			"Rating" : 3587,
+			"Results" : {
+				"Altair 7.0.6" : {
+					"H2h" : 1,
+					"Scores" : [
+						{
+							"Game" : 2,
+							"Result" : 1,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "1"
+				},
+				"Ethereal 14.40-frc" : {
+					"H2h" : 0,
+					"Scores" : [],
+					"Text" : ""
+				},
+				"RubiChess 20240506" : {
+					"H2h" : 0,
+					"Scores" : [],
+					"Text" : ""
+				},
+				"Stockfish dev-20240612-025da6a0" : {
+					"H2h" : 0,
+					"Scores" : [
+						{
+							"Game" : 6,
+							"Result" : 0,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "0"
+				},
+				"Stormphrax 4.1.16_d07a844" : {
+					"H2h" : 1,
+					"Scores" : [
+						{
+							"Game" : 7,
+							"Result" : 1,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "1"
+				}
+			},
+			"Score" : 2,
+			"Strikes" : 0,
+			"WinsAsBlack" : 0,
+			"WinsAsWhite" : 2,
+			"RMobilityScore" : 2.0
+		},
+		"RubiChess 20240506" : {
+			"Abbreviation" : "Ru",
+			"Elo" : 10,
+			"Games" : 4,
+			"GamesAsBlack" : 3,
+			"GamesAsWhite" : 1,
+			"LossAsBlack" : 1,
+			"LossAsWhite" : 0,
+			"Neustadtl" : 2,
+			"Opponent" : "Altair 7.0.6",
+			"Performance" : 50,
+			"Rank" : 4,
+			"Rating" : 3545,
+			"Results" : {
+				"Altair 7.0.6" : {
+					"H2h" : 1,
+					"Scores" : [
+						{
+							"Game" : 9,
+							"Result" : 1,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "1"
+				},
+				"Ethereal 14.40-frc" : {
+					"H2h" : 0.5,
+					"Scores" : [
+						{
+							"Game" : 3,
+							"Result" : 0.5,
+							"Winner" : "None"
+						}
+					],
+					"Text" : "="
+				},
+				"KomodoDragon 3.3" : {
+					"H2h" : 0,
+					"Scores" : [],
+					"Text" : ""
+				},
+				"Stockfish dev-20240612-025da6a0" : {
+					"H2h" : 0,
+					"Scores" : [
+						{
+							"Game" : 11,
+							"Result" : 0,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "0"
+				},
+				"Stormphrax 4.1.16_d07a844" : {
+					"H2h" : 0.5,
+					"Scores" : [
+						{
+							"Game" : 4,
+							"Result" : 0.5,
+							"Winner" : "None"
+						}
+					],
+					"Text" : "="
+				}
+			},
+			"Score" : 2,
+			"Strikes" : 0,
+			"WinsAsBlack" : 0,
+			"WinsAsWhite" : 1,
+			"RMobilityScore" : 2.0
+		},
+		"Stockfish dev-20240612-025da6a0" : {
+			"Abbreviation" : "St",
+			"Elo" : -2,
+			"Games" : 4,
+			"GamesAsBlack" : 1,
+			"GamesAsWhite" : 3,
+			"LossAsBlack" : 0,
+			"LossAsWhite" : 0,
+			"Neustadtl" : 6,
+			"Opponent" : "Stormphrax 4.1.16_d07a844",
+			"Performance" : 87.5,
+			"Rank" : 1,
+			"Rating" : 3681,
+			"Results" : {
+				"Altair 7.0.6" : {
+					"H2h" : 0,
+					"Scores" : [],
+					"Text" : ""
+				},
+				"Ethereal 14.40-frc" : {
+					"H2h" : 0.5,
+					"Scores" : [
+						{
+							"Game" : 8,
+							"Result" : 0.5,
+							"Winner" : "None"
+						}
+					],
+					"Text" : "="
+				},
+				"KomodoDragon 3.3" : {
+					"H2h" : 1,
+					"Scores" : [
+						{
+							"Game" : 6,
+							"Result" : 1,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "1"
+				},
+				"RubiChess 20240506" : {
+					"H2h" : 1,
+					"Scores" : [
+						{
+							"Game" : 11,
+							"Result" : 1,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "1"
+				},
+				"Stormphrax 4.1.16_d07a844" : {
+					"H2h" : 1,
+					"Scores" : [
+						{
+							"Game" : 1,
+							"Result" : 1,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "1"
+				}
+			},
+			"Score" : 3.5,
+			"Strikes" : 0,
+			"WinsAsBlack" : 0,
+			"WinsAsWhite" : 3,
+			"RMobilityScore" : 3.5078125
+		},
+		"Stormphrax 4.1.16_d07a844" : {
+			"Abbreviation" : "So",
+			"Elo" : -36,
+			"Games" : 4,
+			"GamesAsBlack" : 2,
+			"GamesAsWhite" : 2,
+			"LossAsBlack" : 2,
+			"LossAsWhite" : 0,
+			"Neustadtl" : 1.25,
+			"Opponent" : "Altair 7.0.6",
+			"Performance" : 25,
+			"Rank" : 5,
+			"Rating" : 3537,
+			"Results" : {
+				"Altair 7.0.6" : {
+					"H2h" : 0.5,
+					"Scores" : [
+						{
+							"Game" : 10,
+							"Result" : 0.5,
+							"Winner" : "None"
+						}
+					],
+					"Text" : "="
+				},
+				"Ethereal 14.40-frc" : {
+					"H2h" : 0,
+					"Scores" : [],
+					"Text" : ""
+				},
+				"KomodoDragon 3.3" : {
+					"H2h" : 0,
+					"Scores" : [
+						{
+							"Game" : 7,
+							"Result" : 0,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "0"
+				},
+				"RubiChess 20240506" : {
+					"H2h" : 0.5,
+					"Scores" : [
+						{
+							"Game" : 4,
+							"Result" : 0.5,
+							"Winner" : "None"
+						}
+					],
+					"Text" : "="
+				},
+				"Stockfish dev-20240612-025da6a0" : {
+					"H2h" : 0,
+					"Scores" : [
+						{
+							"Game" : 1,
+							"Result" : 0,
+							"Winner" : "White"
+						}
+					],
+					"Text" : "0"
+				}
+			},
+			"Score" : 1,
+			"Strikes" : 0,
+			"WinsAsBlack" : 0,
+			"WinsAsWhite" : 0,
+			"RMobilityScore" : 1.125
+		}
+	}
+}
