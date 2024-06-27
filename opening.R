@@ -1,4 +1,4 @@
-# Chess computers across decades have reached unprecedented strengths, starting with the success of IBM computer Deep Blue. 
-# A data set was sourced from CCRL (Computer Chess Rating Lists) to measure these developments. 
-# The data was then used to graph out the changes in rating of top chess computers in an analytical format. 
-# With rigorous analysis, it is noted that chess computers are several hundred rating points higher than humans, and now all compete among themselves with unorthodox styles.
+# Over the decades, chess computers have achieved unprecedented levels of strength. 
+# Data sourced from the CCRL (Computer Chess Rating Lists) was used to analyze these developments. 
+# This data was then graphed to illustrate the changes in ratings of various chess computers over time. 
+# Through rigorous analysis, it was observed that chess computers now have ratings several hundred points higher than those of human players. As a result, these computers primarily compete against each other, often employing unorthodox styles.
